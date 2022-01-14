@@ -1,6 +1,6 @@
 import sendgrid from "@sendgrid/mail";
-
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+const APIKEY = process.env.SENDGRID_API_KEY
+sendgrid.setApiKey(APIKEY);
 
 async function sendEmail(req, res) {
   try {
@@ -13,7 +13,7 @@ async function sendEmail(req, res) {
           {
               "to":[
                 {
-                    "email":req.sendTo.value
+                    "email":req.body.sendTo
                 }
               ],
               "dynamic_template_data":{
@@ -28,7 +28,7 @@ async function sendEmail(req, res) {
         "template_id":"d-ab409d53397b43299116632c2939641b"
     });
   } catch (error) {
-    // console.log(error);
+    console.log(error);
     return res.status(error.statusCode || 500).json({ error: error.message });
   }
 

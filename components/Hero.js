@@ -13,8 +13,12 @@ const handleClick = (sendTo) =>  {
     },
     method: "POST",
   }).then(resp => {
-    sendTo.value = "";
-    alert("Early access email sent!")
+    if (resp.status == 200) {
+      sendTo.value = "";
+      alert("Early access email sent!")
+    } else (
+      console.log(resp.json())
+    )
   });
 }
 
