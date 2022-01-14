@@ -12,7 +12,7 @@ const Footer = () => {
         <Row className="mt-5">
           <Col md={12}>
             <div className="text-center text-muted">
-              <h6>2022 © OnSiteJS | hello@onsitejs.org</h6>
+              <h6>2022 © OnSiteJS | hello@onsitejs.org | <a href="https://twitter.com/onsitejs">@onsitejs</a> </h6>
             </div>
           </Col>
         </Row>
