@@ -49,7 +49,7 @@ const Hero = () => {
             <div className="pr-lg-5">
               
                 
-              <h1 className="mb-4 font-weight-normal line-height-1_4">Finally! <span className="text-primary font-weight-medium">Privacy-conscious</span> website analytics that you'll actually like.</h1>
+              <h1 className="mb-4 font-weight-normal line-height-1_4">Finally! <span className="text-primary font-weight-medium">Privacy-conscious</span> website analytics that you&apos;ll actually like.</h1>
               <p className="text-muted mb-4 pb-2"><b>Ditch Google for privacy-preserving website analytics with superpowers:</b>
               <ul className="list-group">
                 <li className="list-unstyled">&#9889;&emsp;&ensp; Intelligent analytics payloads that adapt on the edge</li>

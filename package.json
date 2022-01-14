@@ -2,8 +2,8 @@
   "name": "onsitejs-landing-page",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npx next telemetry disable;next dev",
+    "build": "npx next telemetry disable;;next build",
     "start": "next start",
     "lint": "next lint"
   },
