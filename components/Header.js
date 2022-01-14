@@ -1,14 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Container,
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink
-} from 'reactstrap';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
