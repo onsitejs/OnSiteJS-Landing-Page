@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 
 const handleClick = (sendTo) =>  {
-  const API_KEY = SENDGRID_API_KEY
+  const API_KEY = process.env.SENDGRID_API_KEY
   const send_data = {
       "from":{
         "email":"hello@onsitejs.org",
