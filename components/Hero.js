@@ -2,37 +2,16 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 
 const handleClick = (sendTo) =>  {
-  const API_KEY = process.env.SENDGRID_API_KEY
-  const send_data = {
-      "from":{
-        "email":"hello@onsitejs.org",
-        "name":"OnSiteJS"
-      },
-      "personalizations":[
-        {
-            "to":[
-              {
-                  "email":sendTo.value
-              }
-            ],
-            "dynamic_template_data":{
-              "Sender_Name":"OnSiteJS, by Backchannel Inc.",
-              "Sender_Address":"228 Park Avenue",
-              "Sender_City":"New York",
-              "Sender_State":"New York",
-              "Sender_Zip":"10003"
-          }
-        }
-      ],
-      "template_id":"d-ab409d53397b43299116632c2939641b"
-  }
-  fetch('https://api.sendgrid.com/v3/mail/send', {
-      method: 'POST',
-      headers: {
-          'authorization': `Bearer ${API_KEY}`,
-          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(send_data)
+
+
+  fetch("/api/sendgrid", {
+    body: JSON.stringify({
+      sendTo: sendTo.value
+    }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+    method: "POST",
   }).then(resp => {
     sendTo.value = "";
     alert("Early access email sent!")
